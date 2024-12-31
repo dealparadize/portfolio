@@ -1,0 +1,20 @@
+---
+// imports
+import { formatDatetime } from "@/lib/utils";
+import type { EducationProps } from "@/types/education";
+
+const { data } = Astro.props;
+const { title, school, location, startDate, endDate } = data as EducationProps;
+---
+
+<div class="flex flex-col gap-2">
+  <div class="bg-cyan-500 text-white px-2 py-1 rounded-full text-sm w-fit">
+    {formatDatetime(startDate)} - {formatDatetime(endDate)}
+  </div>
+  <h3 class="text-xl font-bold">{title}</h3>
+  <div class="flex gap-2">
+    <p>{school}</p>
+    <span>/</span>
+    <p>{location}</p>
+  </div>
+</div>

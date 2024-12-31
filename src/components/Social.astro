@@ -1,0 +1,25 @@
+---
+// components imports
+import { Icon } from "astro-icon/components";
+
+// config import
+import { SOCIALS } from "@/config";
+---
+
+<div class={"flex gap-2 md:gap-4"}>
+  {
+    SOCIALS.map(
+      (social) =>
+        social.show && (
+          <a
+            class={`${social.name} text-xl md:text-2xl text-silver-n500 hover:text-silver-n900 rounded-md p-2 duration-100 hover:bg-neutral-200`}
+            href={social.url}
+            target="_blank"
+            aria-label={social.name + "-link"}
+          >
+            <Icon name={social.icon} class="text-3xl text-n500" />
+          </a>
+        )
+    )
+  }
+</div>
