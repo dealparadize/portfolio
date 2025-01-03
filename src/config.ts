@@ -27,4 +27,10 @@ export const SOCIALS = [
     icon: "mdi:linkedin",
     show: true,
   },
+  {
+    name: "Email",
+    url: "mailto:ealejandrocasillas@gmail.com",
+    icon: "mdi:email",
+    show: true,
+  },
 ];
